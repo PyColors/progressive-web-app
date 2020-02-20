@@ -38,7 +38,6 @@ const Home = ({ history: { push } }: HomeProps) => {
 
   return (
     <Fragment key="home">
- 
         <div className={classes.root}>
           <CssBaseline />
           <Container component="main" className={classes.main} maxWidth="lg">

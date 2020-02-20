@@ -43,3 +43,34 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 # progressive-web-app
+
+
+
+
+
+# The Web App Manifest
+check out the [the documentation](https://developers.google.com/web/fundamentals/web-app-manifest)
+
+```
+{
+  "name": "PWA",
+  "short_name": "Progressive Web App",
+  "description": "A Progressive Web App with React, TypeScript and, Easy Peasy",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#3f51b5",
+  "background_color": "#3f51b5",
+  "icons": [
+    {
+      "src": "public/images/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "public/images/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+```
