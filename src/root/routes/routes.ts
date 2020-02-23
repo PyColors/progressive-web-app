@@ -6,6 +6,7 @@ import Navigation3 from '../../views/navigation-3';
 import Navigation4 from '../../views/navigation-4';
 import Navigation5 from '../../views/navigation-5';
 import Navigation6 from '../../views/navigation-6';
+import SaverScreen from '../../views/saver-screen';
 
 export const routes: Route[] = [
   {
@@ -42,5 +43,10 @@ export const routes: Route[] = [
     path: '/navigation-6',
     exact: true,
     component: Navigation6,
+  },
+  {
+    path: '/saver-screen',
+    exact: true,
+    component: SaverScreen,
   },
 ];

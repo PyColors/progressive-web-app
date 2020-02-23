@@ -38,7 +38,7 @@ const Navigation4 = ({ history: { push } }: Navigation1Props) => {
   const classes = useStyles();
 
   return (
-    <Fragment key="privac-policy">
+    <Fragment key="page-4">
       <main className={classes.main}>
         <Container maxWidth="xl" component="section" className={classes.top}>
           <Container maxWidth="lg" component="div" className={classes.innerTop}>

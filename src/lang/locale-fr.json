@@ -1,4 +1,5 @@
-{ 
+{
   "menu.home": "Accueil",
-  "not.found": "Page non trouvée" 
+  "not.found": "Page non trouvée",
+  "startApp.save-screen": "Toucher l'écran"
 }

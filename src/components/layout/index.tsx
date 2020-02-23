@@ -9,11 +9,9 @@ interface LayoutProps extends ChildrenProps {}
 const Layout = ({ children }: LayoutProps) => {
   return (
     <Fragment key="layout">
-      <section id="app">
-        <Header />
-        <Content>{children}</Content>
-        <Footer />
-      </section>
+      <Header />
+      <Content>{children}</Content>
+      <Footer />
     </Fragment>
   );
 };

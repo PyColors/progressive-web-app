@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     lineHeight: '2.2',
     fontFamily: 'verdana',
   },
+  link: {},
 });
 
 export default useStyles;

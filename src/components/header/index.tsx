@@ -2,6 +2,7 @@ import { AppBar, Toolbar } from '@material-ui/core';
 import React, { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Logo } from './components';
+import Link from '@material-ui/core/Link';
 import useStyles from './style';
 
 const Header = () => {
@@ -20,7 +21,9 @@ const Header = () => {
         <Grid container className={classes.toolbar}>
           <Grid item xs={6}>
             <Toolbar className={classes.toolbar}>
-              <Logo />
+              <Link variant="button" href="/" className={classes.link}>
+                <Logo />
+              </Link>
             </Toolbar>
           </Grid>
           <Grid item xs={6}>
