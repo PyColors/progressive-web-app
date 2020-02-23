@@ -1,3 +1,5 @@
+# Progressive Web App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,14 +44,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-# progressive-web-app
 
+## The Web App Manifest
 
-
-
-
-# The Web App Manifest
-check out the [the documentation](https://developers.google.com/web/fundamentals/web-app-manifest)
+Check out the [documentation](https://developers.google.com/web/fundamentals/web-app-manifest)
 
 ```
 {

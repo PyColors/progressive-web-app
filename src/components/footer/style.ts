@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    position: 'absolute',
+    position: 'fixed',
     bottom: '0',
     width: '100%',
     color: '#757575',
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   link: {
     margin: theme.spacing(6, 3, 0, 0),
     textTransform: 'capitalize',
-    color: '#757575',
+    color: '#fff',
     fontSize: '1.1em',
     '&:hover': {
       color: theme.palette.secondary.main,
