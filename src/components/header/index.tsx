@@ -17,10 +17,10 @@ const Header = () => {
 
   return (
     <Fragment key="header">
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Grid container className={classes.toolbar}>
           <Grid item xs={6}>
-            <Toolbar className={classes.toolbar}>
+            <Toolbar>
               <Link variant="button" href="/" className={classes.link}>
                 <Logo />
               </Link>
