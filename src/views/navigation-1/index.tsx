@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import { useFetch } from '../../hooks/api.hook';
+import { useStoreActions, useStoreState } from '../../hooks/store.hook';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { RouterProps } from '../../interfaces/router-props.interface';
@@ -50,7 +52,18 @@ const useStyles = makeStyles(theme => ({
 interface Navigation1Props extends RouterProps {}
 
 const Navigation1 = ({ history: { push } }: Navigation1Props) => {
+  const jsonFreeApi = useStoreState(state => state.jsonFreeApi.items);
+  const fetch = useStoreActions(actions => actions.jsonFreeApi.fetch);
+  const reset = useStoreActions(actions => actions.jsonFreeApi.reset);
+  const fetchCallback = useFetch(fetch);
+
   const classes = useStyles();
+  useEffect(() => {
+    fetchCallback();
+    return () => {
+      reset();
+    };
+  }, [fetchCallback, reset]);
 
   return (
     <Fragment key="page-1">
@@ -65,7 +78,8 @@ const Navigation1 = ({ history: { push } }: Navigation1Props) => {
                 align="center"
                 className={classes.headerInnerTitle}
               >
-                Navigation<span className={classes.headerInnerTitlePoint}>_</span>
+                Navigation
+                <span className={classes.headerInnerTitlePoint}>_</span>
               </Typography>
             </Grid>
           </Container>
@@ -91,6 +105,11 @@ const Navigation1 = ({ history: { push } }: Navigation1Props) => {
               <Typography variant="h4" component="h1" gutterBottom className={classes.titleContent}>
                 Post haec Gallus
               </Typography>
+              <ul>
+                {jsonFreeApi.map((title, index) => (
+                  <li key={index}>{title.title}</li>
+                ))}
+              </ul>
               <p>
                 Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi
                 suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque

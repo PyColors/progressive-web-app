@@ -1,6 +1,6 @@
-import { Action, action } from "easy-peasy";
+import { Action, action } from 'easy-peasy';
 
-import { getUserLocale } from "../lang/locale";
+import { getUserLocale } from '../lang/locale';
 
 export interface LocaleModel {
   item: string;
@@ -13,5 +13,5 @@ export const localeModel: LocaleModel = {
   item: defaultItem,
   setItem: action((state, item) => {
     state.item = item;
-  })
+  }),
 };

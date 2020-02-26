@@ -1,7 +1,9 @@
-import { createStore } from "easy-peasy";
-import { storeModel } from "../models/store.model";
+import { createStore } from 'easy-peasy';
 
-const store = createStore(storeModel);
+import { injectionModel } from '../models/injection.model';
+import { storeModel } from '../models/store.model';
+
+const store = createStore(storeModel, { injections: injectionModel });
 
 // Wrapping dev only code like this normally gets stripped out by bundlers
 // such as Webpack when creating a production build.
