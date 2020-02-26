@@ -1,4 +1,4 @@
-export interface LegalExpert {
+export interface JsonFreeApi {
   iuserIdd: number;
   id: number;
   title: string;

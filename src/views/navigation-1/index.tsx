@@ -52,11 +52,13 @@ const useStyles = makeStyles(theme => ({
 interface Navigation1Props extends RouterProps {}
 
 const Navigation1 = ({ history: { push } }: Navigation1Props) => {
+  const isLoading = useStoreState(state => state.jsonFreeApi.isLoading);
   const jsonFreeApi = useStoreState(state => state.jsonFreeApi.items);
   const fetch = useStoreActions(actions => actions.jsonFreeApi.fetch);
   const reset = useStoreActions(actions => actions.jsonFreeApi.reset);
   const fetchCallback = useFetch(fetch);
 
+  console.log('isLoading', isLoading);
   const classes = useStyles();
   useEffect(() => {
     fetchCallback();
@@ -105,11 +107,15 @@ const Navigation1 = ({ history: { push } }: Navigation1Props) => {
               <Typography variant="h4" component="h1" gutterBottom className={classes.titleContent}>
                 Post haec Gallus
               </Typography>
-              <ul>
-                {jsonFreeApi.map((title, index) => (
-                  <li key={index}>{title.title}</li>
-                ))}
-              </ul>
+              {isLoading ? (
+                <span>Loading...</span>
+              ) : (
+                <ul>
+                  {jsonFreeApi.map((title, index) => (
+                    <li key={index}>{title.title}</li>
+                  ))}
+                </ul>
+              )}
               <p>
                 Hierapolim profecturus ut expeditioni specie tenus adesset, Antiochensi plebi
                 suppliciter obsecranti ut inediae dispelleret metum, quae per multas difficilisque

@@ -1,9 +1,9 @@
-import * as legalExpertService from '../services/json-free-api.service';
+import * as jsonFreeApiService from '../services/json-free-api.service';
 
 export interface InjectionModel {
-  legalExpertService: typeof legalExpertService;
+  jsonFreeApiService: typeof jsonFreeApiService;
 }
 
 export const injectionModel: InjectionModel = {
-  legalExpertService,
+  jsonFreeApiService,
 };
