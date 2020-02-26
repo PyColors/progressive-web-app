@@ -1,8 +1,8 @@
-import React from "react";
-import { Route, Switch } from "react-router";
+import React from 'react';
+import { Route, Switch } from 'react-router';
 
-import { NotFound } from "../../components";
-import { routes } from "./routes";
+import { NotFound } from '../../components';
+import { routes } from './routes';
 
 const Routes = () => {
   return (
