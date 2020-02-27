@@ -31,9 +31,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-interface HomeProps extends RouterProps {}
+interface SaverScreenProps extends RouterProps {}
 
-const SaverScreen = ({ history: { push } }: HomeProps) => {
+const SaverScreen = ({ history: { push } }: SaverScreenProps) => {
   const classes = useStyles();
 
   return (

@@ -58,8 +58,8 @@ const Navigation1 = ({ history: { push } }: Navigation1Props) => {
   const reset = useStoreActions(actions => actions.jsonFreeApi.reset);
   const fetchCallback = useFetch(fetch);
 
-  console.log('isLoading', isLoading);
   const classes = useStyles();
+
   useEffect(() => {
     fetchCallback();
     return () => {
